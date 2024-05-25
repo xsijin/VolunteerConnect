@@ -3,42 +3,35 @@ import "./Performance.css";
 
 const data = [
   {
-    skill: "Communication Skills",
-    points: 120,
+    skill: "Communication Skill",
+    points: 70,
   },
   {
-    skill: "Empathy and Compassion",
-    points: 98,
+    skill: "Creativity",
+    points: 60,
   },
   {
-    skill: "Active Listening",
-    points: 86,
+    skill: "Creativity",
+    points: 60,
   },
   {
-    skill: "Reliability and Consistency",
-    points: 99,
-  },
-  {
-    skill: "Problem-Solving and Adaptability",
-    points: 85,
-  },
-  {
-    skill: "Respect and Sensitivity",
-    points: 65,
+    skill: "Problem-Solving Skill",
+    points: 90,
   },
 ];
 
 function Performance() {
   return (
     <div className="chartContainer">
-      <p>Performance Chart</p>
+      <p className="chartTitle">Performance Chart</p>
       <RadarChart
+        className="chart"
         h={300}
         data={data}
         dataKey="skill"
-        withPolarGrid
-        withPolarAngleAxis
-        withPolarRadiusAxis
+        // withPolarGrid
+        // withPolarAngleAxis
+        // withPolarRadiusAxis
         series={[{ name: "points", color: "blue.4", opacity: 0.2 }]}
       />
       <div className="summary">
