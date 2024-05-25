@@ -109,6 +109,7 @@ export const SigninModal = ({ opened, setUser, close }) => {
             mt="xl"
             onClick={handleSubmit}
             loading={submitting}
+            loaderProps={{ color: "gray", type: "dots" }}
             className={buttonstyles.button}
             size="lg"
           >
