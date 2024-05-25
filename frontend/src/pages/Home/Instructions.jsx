@@ -3,7 +3,7 @@ import mv from "@/assets/mv.png";
 import { Link } from "react-router-dom";
 import styles from "@/components/Parts/Button/Button.module.scss";
 
-const Home = () => {
+const Instructions = () => {
   return (
     <Flex
       align={"center"}
@@ -30,11 +30,11 @@ const Home = () => {
         <Box ta={"center"} mt="xl">
           <Button
             component={Link}
-            to="/instructions"
+            to="/scenarios"
             className={styles.button}
             size="lg"
           >
-            START
+            Continue
           </Button>
         </Box>
       </Box>
@@ -42,4 +42,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Instructions;

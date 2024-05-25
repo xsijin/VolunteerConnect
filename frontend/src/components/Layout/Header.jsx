@@ -74,7 +74,11 @@ export const Header = ({ user, setUser }) => {
   const navData = [
     {
       path: "/",
-      title: "INSTRUCTION",
+      title: "LANDING",
+    },
+    {
+      path: "/instructions",
+      title: "INSTRUCTIONS",
     },
     {
       path: "/scenarios",
