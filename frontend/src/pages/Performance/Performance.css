@@ -1,0 +1,60 @@
+.chartContainer {
+  /* max-width: 1000px; */
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.chartTitle {
+  background-color: rgb(246, 246, 246);
+  padding: 30px 0;
+  margin: 30px 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.chart {
+  background-color: #c5e9f0;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.chartContainer p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.chartContainer .summary {
+  margin-top: 20px;
+}
+
+.chartContainer .summary div {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.chartContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chartContainer ul li {
+  background: #e0f7fa;
+  margin: 4px 0;
+  padding: 8px;
+  border-radius: 8px;
+  color: #00796b;
+  font-size: 0.9rem;
+}
+
+.chartContainer ul li:nth-child(odd) {
+  background: #b2ebf2;
+}
