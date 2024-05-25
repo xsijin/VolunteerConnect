@@ -3,7 +3,9 @@ import "@/pages/Performance/Performance.css";
 import { Badge, Box, Button, Flex, Image, Table, Title } from "@mantine/core";
 // import { getToken } from "../../util/security";
 import { Link, useNavigate } from "react-router-dom";
-import mv from "@/assets/mv.png";
+// import mv from "@/assets/mv.png";
+import badge from "@/assets/badge.png";
+import trophy from "@/assets/trophy.png";
 import buttonstyles from "@/components/Parts/Button/Button.module.scss";
 import styles from "@/components/Profile/Profile.module.scss";
 import { useHover } from "@mantine/hooks";
@@ -129,19 +131,19 @@ function Profile() {
           <Title order={1}>ACHIVEMENT</Title>
           <Flex align={"center"} justify={"center"} gap="xl" mt="xl">
             <Box className={styles.badge}>
-              <Image src={mv} w={"100px"} h={"100px"} />
+              <Image src={badge} w={"100px"} h={"100px"} />
               <Badge color="yellow" className={styles.icon}>
                 X3
               </Badge>
             </Box>
             <Box className={styles.badge}>
-              <Image src={mv} w={"100px"} h={"100px"} />
+              <Image src={badge} w={"100px"} h={"100px"} />
               <Badge color="yellow" className={styles.icon}>
                 X5
               </Badge>
             </Box>
             <Box className={styles.badge}>
-              <Image src={mv} w={"100px"} h={"100px"} />
+              <Image src={trophy} w={"100px"} h={"100px"} />
               <Badge color="yellow" className={styles.icon}>
                 X1
               </Badge>
