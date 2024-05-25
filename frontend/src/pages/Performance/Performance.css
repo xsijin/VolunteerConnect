@@ -30,7 +30,15 @@
 }
 
 .chartContainer .summary {
-  margin-top: 20px;
+  margin: 30px;
+  border: 0.5px solid black;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .chartContainer .summary div {
