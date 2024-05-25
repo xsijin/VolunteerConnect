@@ -28,11 +28,12 @@ const Instructions = () => {
 
         <Text fz="xl" fs={"italic"}>
           Welcome to VolunteerConnect! In this expeience, you will get a taste
-          of what volunteering with the elderly is like. Click “Start Roleplay”
-          to begin engaging with our virtual elderly character, using the chat
-          interface to communicate with empathy and patience. Work towards the
-          scenarios objectives, then end the session and review the feedback to
-          see your strengths and areas for improvement.<br></br>
+          of what volunteering with the elderly is like. Click “Start" to begin
+          engaging with our virtual elderly character, using the chat interface
+          to communicate with empathy and patience. Work towards addressing
+          their concerns. After three interactions you may choose to end the and
+          review the feedback to see your strengths and areas for improvement.
+          <br></br>
           <br></br>At the end of the experience, please share any volunteering
           experiences you have had. These experiences will help us generate
           realistic scenarios that will assist other new volunteers!
@@ -44,7 +45,7 @@ const Instructions = () => {
             className={styles.button}
             size="lg"
           >
-            START
+            CONTINUE
           </Button>
         </Box>
       </Box>

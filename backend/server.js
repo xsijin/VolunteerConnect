@@ -25,6 +25,7 @@ app.use("/", indexRouter);
 app.use("/user", userRouter);
 app.use("/score", scoreRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function (req, res) {
   res.status(404).json("Not Found");
