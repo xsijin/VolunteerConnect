@@ -1,18 +1,13 @@
+import { Box, Flex, Image, Text, Title, Accordion, List } from "@mantine/core";
 /* eslint-disable react/prop-types */
-import { Box, Flex, Image, Text, Title } from "@mantine/core";
 import styles from "@/components/Roleplay/ScenarioCard.module.scss";
 
 export const ScenarioCard = ({ persona }) => {
-  const {
-    name,
-    age,
-    image,
-    background,
-    personality,
-    issues,
-    trainingFocus,
-    language,
-  } = persona;
+
+  // eslint-disable-next-line react/prop-types
+  const { name, age, image, background, personality, issues, trainingFocus, language, checkList } =
+    persona;
+
   return (
     <Flex
       w="40%"
@@ -25,36 +20,53 @@ export const ScenarioCard = ({ persona }) => {
         alignSelf: "start",
       }}
     >
-      <Image src={image} w="30%" m={"auto"} />
+      <Image src={image} w="35%" m={"auto"} />
       <Box mt="lg">
-        <Title c={"2"} fz={"xl"} ta={"center"}>
+        <Title c={"2"} fz={"md"} ta={"center"}>
           {name}
           <br></br>
           {age} Years Old
         </Title>
         <Box mt="md">
-          <Text>
-            <strong>Background:</strong>
-            <br></br> {background}
-          </Text>
-          <Text mt="sm">
-            <strong>Personality:</strong>
-            <br></br> {personality}
-          </Text>
-          <Text mt="sm">
-            <strong>Current Issues:</strong>
-            <br></br> {issues}
-          </Text>
-          <Text mt="sm">
-            <strong>Training Focus:</strong>
-            <br></br>
-            {trainingFocus}
-          </Text>
-          <Text mt="sm">
-            <strong>Language:</strong>
-            <br></br>
-            {language.join(", ")}
-          </Text>
+          <Accordion variant="filled" defaultValue="currentScenario">
+            <Accordion.Item value="currentScenario">
+              <Accordion.Control>Information</Accordion.Control>
+              <Accordion.Panel>
+                <Text size="sm">
+                  <strong>Background:</strong>
+                  <br></br> {background}
+                </Text>
+                <Text mt="sm" size="sm">
+                  <strong>Personality:</strong>
+                  <br></br> {personality}
+                </Text>
+                <Text mt="sm" size="sm">
+                  <strong>Current Issues:</strong>
+                  <br></br> {issues}
+                </Text>
+                <Text mt="sm" size="sm">
+                  <strong>Languages spoken:</strong>
+                  <br></br> {language.join(", ")}
+                </Text>
+                <Text mt="sm" size="sm">
+                  <strong>Training Focus:</strong>
+                  <br></br>
+                  {trainingFocus}
+                </Text>
+              </Accordion.Panel>
+            </Accordion.Item>
+
+            <Accordion.Item value="checkList">
+              <Accordion.Control>Topics</Accordion.Control>
+              <Accordion.Panel>
+                <List size="sm">
+                  {checkList.map((item, index) => (
+                    <List.Item key={index}>{item}</List.Item>
+                  ))}
+                </List>
+              </Accordion.Panel>
+            </Accordion.Item>
+          </Accordion>
         </Box>
       </Box>
     </Flex>
