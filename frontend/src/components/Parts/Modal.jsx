@@ -24,6 +24,7 @@ function Modal({ opened, close, modalContent, toggle, handleSubmit, title }) {
           mt="md"
           onClick={onClickSubmit}
           loading={submitting}
+          loaderProps={{ color: "gray", type: "dots" }}
         >
           Proceed
         </Button>

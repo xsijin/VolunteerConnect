@@ -1,10 +1,10 @@
-import { RadarChart } from "@mantine/charts";
 import "@/pages/Performance/Performance.css";
 import { useEffect, useState } from "react";
-import { Flex } from "@mantine/core";
-import { ShareScore } from "@/components/Performance/ShareScore";
+import { Box, Button, Flex, Image, Table, Title } from "@mantine/core";
 import { getToken } from "../../util/security";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { Link, useNavigate, useOutletContext } from "react-router-dom";
+import mv from "@/assets/mv.png";
+import styles from "@/components/Parts/Button/Button.module.scss";
 
 function Profile() {
   const [data, setData] = useState(null);
@@ -59,6 +59,24 @@ function Profile() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const elements = [
+    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+  ];
+
+  const rows = elements.map((element) => (
+    <Table.Tr key={element.name}>
+      <Table.Td>{element.date}</Table.Td>
+      <Table.Td>{element.score1}</Table.Td>
+      <Table.Td>{element.score2}</Table.Td>
+      <Table.Td>{element.score3}</Table.Td>
+      <Table.Td>{element.score4}</Table.Td>
+    </Table.Tr>
+  ));
+
   return (
     <>
       {loading ? (
@@ -72,7 +90,48 @@ function Profile() {
           align={"start"}
           direction={"column"}
         >
-          <div className="chartContainer">
+          <Box>
+            <Title order={1}>ACHIVEMENT</Title>
+            <Flex align={"center"} justify={"center"} gap="xl" mt="xl">
+              <Box>
+                <Image src={mv} w={"100px"} h={"100px"} />
+              </Box>
+              <Box>
+                <Image src={mv} w={"100px"} h={"100px"} />
+              </Box>
+              <Box>
+                <Image src={mv} w={"100px"} h={"100px"} />
+              </Box>
+            </Flex>
+          </Box>
+          <Box mt="xl" w="100%">
+            <Title order={1}>HISTORY</Title>
+            <Table mt="xl">
+              <Table.Thead>
+                <Table.Tr>
+                  <Table.Th>Date taken</Table.Th>
+                  <Table.Th>Communication</Table.Th>
+                  <Table.Th>Creativity</Table.Th>
+                  <Table.Th>Empathy</Table.Th>
+                  <Table.Th>Problem Solving</Table.Th>
+                </Table.Tr>
+              </Table.Thead>
+              <Table.Tbody>{rows}</Table.Tbody>
+            </Table>
+          </Box>
+
+          <Box ta={"center"} mx={"auto"} mt="xl">
+            <Button
+              size="lg"
+              className={styles.button}
+              component={Link}
+              to="/scenarios"
+            >
+              Take New Roleplay
+            </Button>
+          </Box>
+
+          {/* <div className="chartContainer">
             <p className="chartTitle">Performance Chart</p>
             <RadarChart
               className="chart"
@@ -97,9 +156,9 @@ function Profile() {
                 <li>Active listening</li>
               </ul>
             </div>
-          </div>
+          </div> */}
 
-          <ShareScore score={scoreId} />
+          {/* <ShareScore score={scoreId} /> */}
         </Flex>
       )}
     </>
