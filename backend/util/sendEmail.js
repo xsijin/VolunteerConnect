@@ -26,8 +26,10 @@ const mailOptions = (obj) => {
           `The results of your volunteer score is in.\n\n` +
           `Use this randomly generated password to access your profile:\n` +
           `${randomPassword}\n\n` +
+          `Access below URL and login:\n` +
+          `${process.env.FRONTEND_URL}/\n\n` +
           `Best regards,\n` +
-          `Volunteer Connect Team`,
+          `VolunteerConnect Team`,
       };
   }
 };
