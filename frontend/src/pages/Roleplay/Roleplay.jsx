@@ -63,11 +63,12 @@ export const Roleplay = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        communication: 2,
-        creativity: 5,
-        empathy: 5,
-        activelistening: 3,
-        problemsolving: 10,
+        communication: score.communication,
+        creativity: score.creativity,
+        empathy: score.empathy,
+        activelistening: score.activelistening,
+        problemsolving: score.problemsolving,
+        debrief: score.debrief,
         persona: persona.id,
       }),
     });

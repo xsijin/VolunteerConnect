@@ -13,6 +13,7 @@ function Performance() {
   const [loading, setLoading] = useState(true);
   const { user } = useOutletContext();
   const localStorageScoreId = localStorage.getItem("score");
+  const [debrief, setDebrief] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -43,6 +44,7 @@ function Performance() {
           points: json.problemsolving,
         },
       ]);
+      setDebrief(json.debrief);
       setLoading(false);
     };
     getData();
@@ -64,8 +66,9 @@ function Performance() {
         >
           <div className="chartContainer">
             <p className="chartTitle">Performance Chart</p>
+            <hr class="solid" />
+
             <RadarChart
-              className="chart"
               h={300}
               data={data}
               dataKey="skill"
@@ -74,22 +77,14 @@ function Performance() {
               // withPolarRadiusAxis
               series={[{ name: "points", color: "blue.4", opacity: 0.2 }]}
             />
-
+            <hr class="solid" />
             {data.map((x, idx) => (
               <p key={idx}>{`${x.skill}: ${x.points}`}</p>
             ))}
+            <hr class="solid" />
             <div className="summary">
               <div>Summary Feedback</div>
-              <div>Areas of Improvement</div>
-              <ul>
-                <li>More sympathy</li>
-                <li>More empathy</li>
-              </ul>
-              <div>What Went Well</div>
-              <ul>
-                <li>Good reaction</li>
-                <li>Active listening</li>
-              </ul>
+              <div>{debrief}</div>
             </div>
           </div>
 
