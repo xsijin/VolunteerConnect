@@ -2,7 +2,7 @@ import "@/pages/Performance/Performance.css";
 // import { useEffect, useState } from "react";
 import { Box, Button, Flex, Image, Table, Title } from "@mantine/core";
 // import { getToken } from "../../util/security";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import mv from "@/assets/mv.png";
 import styles from "@/components/Parts/Button/Button.module.scss";
 
@@ -11,7 +11,7 @@ function Profile() {
   // const [loading, setLoading] = useState(true);
   // const [scoreId, setScoreId] = useState(null);
   // const { user } = useOutletContext();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   if (!user) {
@@ -68,7 +68,7 @@ function Profile() {
   ];
 
   const rows = elements.map((element) => (
-    <Table.Tr key={element.name}>
+    <Table.Tr key={element.name} onClick={() => navigate("/")}>
       <Table.Td>{element.date}</Table.Td>
       <Table.Td>{element.score1}</Table.Td>
       <Table.Td>{element.score2}</Table.Td>
@@ -103,7 +103,7 @@ function Profile() {
         </Box>
         <Box mt="xl" w="100%">
           <Title order={1}>HISTORY</Title>
-          <Table mt="xl">
+          <Table mt="xl" highlightOnHover={true}>
             <Table.Thead>
               <Table.Tr>
                 <Table.Th>Date taken</Table.Th>
