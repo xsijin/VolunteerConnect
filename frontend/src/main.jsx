@@ -9,7 +9,11 @@ import { Layout } from "./components/Layout/Layout";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
 import "@mantine/dates/styles.css";
+import Scenarios from "./pages/Scenarios/Scenarios";
+import Performance from "./pages/Performance/Performance";
+import Home from "./pages/Home/Home";
 import { Roleplay } from "./pages/Roleplay/Roleplay";
+import Profile from "./pages/Profile/Profile";
 
 // https://mantine.dev/theming/default-theme/
 const theme = createTheme({
@@ -33,8 +37,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           {/* Root */}
           <Route path="/" element={<Layout />}>
             {/* Root */}
+            <Route path="/" element={<Home />} />
 
+            <Route path="/scenarios" element={<Scenarios />} />
+            <Route path="/performance/:id" element={<Performance />} />
             <Route path="/roleplay/:id" element={<Roleplay />} />
+            <Route path="/profile" element={<Profile />} />
           </Route>
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
