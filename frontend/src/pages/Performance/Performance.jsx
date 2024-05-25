@@ -37,12 +37,18 @@ function Performance() {
           skill: "Problem-Solving Skill",
           points: json.problemsolving,
         },
+        {
+          skill: "Active Listening",
+          points: json.activelistening,
+        },
       ]);
       setLoading(false);
     };
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  console.log("data", data);
 
   return (
     <>
@@ -69,6 +75,10 @@ function Performance() {
               // withPolarRadiusAxis
               series={[{ name: "points", color: "blue.4", opacity: 0.2 }]}
             />
+
+            {data.map((x, idx) => (
+              <p key={idx}>{`${x.skill}: ${x.points}`}</p>
+            ))}
             <div className="summary">
               <div>Summary Feedback</div>
               <div>Areas of Improvement</div>

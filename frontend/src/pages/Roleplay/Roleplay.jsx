@@ -161,7 +161,7 @@ export const Roleplay = () => {
                 className={styles.button}
                 size={"lg"}
               >
-                END CONVERSASION
+                END CONVERSATION
               </Button>
             </form>
           </Box>
