@@ -58,7 +58,7 @@ export const Header = ({ user, setUser }) => {
       storeToken(token);
       setUser(getUser());
       setSubmitting(false);
-      navigate("/");
+      navigate("/profile");
       successToast({
         title: "Welcome back!",
         message: "You have successfully logged in.",
