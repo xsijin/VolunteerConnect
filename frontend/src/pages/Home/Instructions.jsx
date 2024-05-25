@@ -3,9 +3,8 @@ import React from "react";
 import { Box, Button, Flex, Image, Text, Title } from "@mantine/core";
 import mv from "@/assets/mv.png";
 import { Link } from "react-router-dom";
-import styles from "@/components/Parts/Button/Button.module.scss";
 
-const Home = () => {
+const Instructions = () => {
   return (
     <Flex
       align={"center"}
@@ -44,4 +43,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Instructions;
