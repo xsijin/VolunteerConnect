@@ -24,5 +24,5 @@ export const getScorePrompt = (messages) => {
     }
 
   Conversation history: ${messages}
-  `;
+`;
 };
