@@ -1,10 +1,11 @@
 import "@/pages/Performance/Performance.css";
 // import { useEffect, useState } from "react";
-import { Box, Button, Flex, Image, Table, Title } from "@mantine/core";
+import { Badge, Box, Button, Flex, Image, Table, Title } from "@mantine/core";
 // import { getToken } from "../../util/security";
 import { Link, useNavigate } from "react-router-dom";
 import mv from "@/assets/mv.png";
-import styles from "@/components/Parts/Button/Button.module.scss";
+import buttonstyles from "@/components/Parts/Button/Button.module.scss";
+import styles from "@/components/Profile/Profile.module.scss";
 
 function Profile() {
   // const [data, setData] = useState(null);
@@ -60,15 +61,15 @@ function Profile() {
   // }, []);
 
   const elements = [
-    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
-    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
-    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
-    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
-    { date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { id: 1, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { id: 2, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { id: 3, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { id: 4, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    { id: 5, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
   ];
 
   const rows = elements.map((element) => (
-    <Table.Tr key={element.name} onClick={() => navigate("/")}>
+    <Table.Tr onClick={() => navigate("/")} key={element.id}>
       <Table.Td>{element.date}</Table.Td>
       <Table.Td>{element.score1}</Table.Td>
       <Table.Td>{element.score2}</Table.Td>
@@ -90,14 +91,23 @@ function Profile() {
         <Box>
           <Title order={1}>ACHIVEMENT</Title>
           <Flex align={"center"} justify={"center"} gap="xl" mt="xl">
-            <Box>
+            <Box className={styles.badge}>
               <Image src={mv} w={"100px"} h={"100px"} />
+              <Badge color="yellow" className={styles.icon}>
+                X3
+              </Badge>
             </Box>
-            <Box>
+            <Box className={styles.badge}>
               <Image src={mv} w={"100px"} h={"100px"} />
+              <Badge color="yellow" className={styles.icon}>
+                X5
+              </Badge>
             </Box>
-            <Box>
+            <Box className={styles.badge}>
               <Image src={mv} w={"100px"} h={"100px"} />
+              <Badge color="yellow" className={styles.icon}>
+                X1
+              </Badge>
             </Box>
           </Flex>
         </Box>
@@ -120,7 +130,7 @@ function Profile() {
         <Box ta={"center"} mx={"auto"} mt="xl">
           <Button
             size="lg"
-            className={styles.button}
+            className={buttonstyles.button}
             component={Link}
             to="/scenarios"
           >
