@@ -18,6 +18,8 @@ const Scenarios = () => {
   const [selectedElderly, setSelectedElderly] = useState(null);
   const [opened, { open, close }] = useDisclosure(false);
 
+  console.log(selectedElderly);
+
   return (
     <Flex
       direction={"column"}
@@ -86,6 +88,12 @@ const Scenarios = () => {
                   <strong>Current Issues:</strong>
                   <br></br> {selectedElderly?.issues}
                 </Text>
+                <Text mt="sm">
+                  <strong>Language:</strong>
+                  <br></br>{" "}
+                   {selectedElderly?.language.join(", ")}
+                </Text>
+
                 {/* <Text mt="sm">
                   <strong>Training Focus:</strong>
                   <br></br>
