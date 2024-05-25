@@ -89,6 +89,10 @@ export const Header = ({ user, setUser }) => {
       title: "ROLEPLAY",
     },
     {
+      path: "/roleplay/1",
+      title: "GENERATING RESULTS",
+    },
+    {
       path: "/performance",
       title: "SHARE RESULTS",
     },
