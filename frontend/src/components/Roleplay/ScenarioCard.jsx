@@ -57,7 +57,7 @@ export const ScenarioCard = ({ persona }) => {
             </Accordion.Item>
 
             <Accordion.Item value="checkList">
-              <Accordion.Control>Topics</Accordion.Control>
+              <Accordion.Control>Engagement Prompts</Accordion.Control>
               <Accordion.Panel>
                 <List size="sm">
                   {checkList.map((item, index) => (
