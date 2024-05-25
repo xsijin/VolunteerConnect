@@ -1,4 +1,13 @@
-import { Box, Button, Flex, Image, Modal, Text, Title } from "@mantine/core";
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Modal,
+  Text,
+  Title,
+  Card,
+} from "@mantine/core";
 import { useState } from "react";
 import { personaData } from "../../data/personas";
 import { useDisclosure } from "@mantine/hooks";
@@ -31,11 +40,19 @@ const Scenarios = () => {
               setSelectedElderly(elderly);
             }}
           >
-            <Image
-              src={elderly.image}
-              alt={elderly.name}
-              className="elderly-image"
-            />
+            <Card shadow="md" padding="xs" w={150} h={300}>
+              <Card.Section>
+                <Image src={elderly.image} h={160} alt={elderly.name} />
+              </Card.Section>
+
+              <Text fw={500} size="xs" mt="md">
+                {elderly.name}
+              </Text>
+
+              <Text mt="xs" c="dimmed" size="xs">
+                {elderly.issues}
+              </Text>
+            </Card>
           </Box>
         ))}
       </Flex>
@@ -69,11 +86,11 @@ const Scenarios = () => {
                   <strong>Current Issues:</strong>
                   <br></br> {selectedElderly?.issues}
                 </Text>
-                <Text mt="sm">
+                {/* <Text mt="sm">
                   <strong>Training Focus:</strong>
                   <br></br>
                   {selectedElderly?.trainingFocus}
-                </Text>
+                </Text> */}
               </Box>
             </Box>
 
