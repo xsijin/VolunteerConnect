@@ -1,10 +1,3 @@
-import React from "react";
-
-const Home = () => {
-  return <div>Home</div>;
-};
-
-export default Homec;
 import { Box, Button, Flex, Image, Text, Title } from "@mantine/core";
 import mv from "@/assets/mv.png";
 import { Link } from "react-router-dom";
