@@ -24,7 +24,7 @@ const scoreSchema = new Schema(
       type: Number,
       required: true,
     },
-    flexibility: {
+    activelistening: {
       type: Number,
       required: true,
     },

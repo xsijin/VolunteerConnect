@@ -20,6 +20,7 @@ function Performance() {
         `${import.meta.env.VITE_API_BASEURL}/score/${pathId}`
       );
       const json = await res.json();
+      console.log("response: ", json);
       setData([
         {
           skill: "Communication Skill",
@@ -32,6 +33,10 @@ function Performance() {
         {
           skill: "Empathy",
           points: json.empathy,
+        },
+        {
+          skill: "Active Listening",
+          points: json.activelistening,
         },
         {
           skill: "Problem-Solving Skill",
@@ -69,6 +74,10 @@ function Performance() {
               // withPolarRadiusAxis
               series={[{ name: "points", color: "blue.4", opacity: 0.2 }]}
             />
+
+            {data.map((x, idx) => (
+              <p key={idx}>{`${x.skill}: ${x.points}`}</p>
+            ))}
             <div className="summary">
               <div>Summary Feedback</div>
               <div>Areas of Improvement</div>
