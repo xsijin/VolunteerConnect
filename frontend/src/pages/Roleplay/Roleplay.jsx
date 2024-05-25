@@ -54,7 +54,7 @@ export const Roleplay = () => {
     e.preventDefault();
     const score = await getScore(messages);
     setScore(score);
-    console.log(score);
+    console.log("SCORE: ", score);
 
     const url = import.meta.env.VITE_API_BASEURL;
     const res = await fetch(`${url}/score`, {
@@ -63,12 +63,12 @@ export const Roleplay = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        communication: 5,
+        communication: 2,
         creativity: 5,
         empathy: 5,
-        flexibility: 5,
-        persona: persona.id,
+        activelistening: 3,
         problemsolving: 10,
+        persona: persona.id,
       }),
     });
 
@@ -177,6 +177,7 @@ export const Roleplay = () => {
             <Text ta={"center"}>
               Problem solving Skill:{score.CommunicationSkills}
             </Text>
+            <Text ta={"center"}>Active Listening:{score.ActiveListening}</Text>
           </Box>
         )}
       </Box>

@@ -20,6 +20,7 @@ function Performance() {
         `${import.meta.env.VITE_API_BASEURL}/score/${pathId}`
       );
       const json = await res.json();
+      console.log("response: ", json);
       setData([
         {
           skill: "Communication Skill",
@@ -34,12 +35,12 @@ function Performance() {
           points: json.empathy,
         },
         {
-          skill: "Problem-Solving Skill",
-          points: json.problemsolving,
-        },
-        {
           skill: "Active Listening",
           points: json.activelistening,
+        },
+        {
+          skill: "Problem-Solving Skill",
+          points: json.problemsolving,
         },
       ]);
       setLoading(false);
@@ -47,8 +48,6 @@ function Performance() {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log("data", data);
 
   return (
     <>
