@@ -13,6 +13,7 @@ function Performance() {
   const [loading, setLoading] = useState(true);
   const { user } = useOutletContext();
   const localStorageScoreId = localStorage.getItem("score");
+  const [debrief, setDebrief] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -43,6 +44,7 @@ function Performance() {
           points: json.problemsolving,
         },
       ]);
+      setDebrief(json.debrief);
       setLoading(false);
     };
     getData();
@@ -80,16 +82,7 @@ function Performance() {
             ))}
             <div className="summary">
               <div>Summary Feedback</div>
-              <div>Areas of Improvement</div>
-              <ul>
-                <li>More sympathy</li>
-                <li>More empathy</li>
-              </ul>
-              <div>What Went Well</div>
-              <ul>
-                <li>Good reaction</li>
-                <li>Active listening</li>
-              </ul>
+              <div>{debrief}</div>
             </div>
           </div>
 
