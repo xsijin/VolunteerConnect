@@ -66,8 +66,9 @@ function Performance() {
         >
           <div className="chartContainer">
             <p className="chartTitle">Performance Chart</p>
+            <hr class="solid" />
+
             <RadarChart
-              className="chart"
               h={300}
               data={data}
               dataKey="skill"
@@ -76,10 +77,11 @@ function Performance() {
               // withPolarRadiusAxis
               series={[{ name: "points", color: "blue.4", opacity: 0.2 }]}
             />
-
+            <hr class="solid" />
             {data.map((x, idx) => (
               <p key={idx}>{`${x.skill}: ${x.points}`}</p>
             ))}
+            <hr class="solid" />
             <div className="summary">
               <div>Summary Feedback</div>
               <div>{debrief}</div>
