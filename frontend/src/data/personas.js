@@ -18,6 +18,12 @@ export const personaData = [
       "Empathy, conversation about loss, engaging in intellectually stimulating discussions.",
     image: chanImage,
     language: ["English", "Mandarin"],
+    checkList: [
+      "Ask about their general well-being: 'How are you feeling today?'",
+      "Discuss feelings of loneliness: 'Do you feel lonely sometimes? What helps you feel better?'",
+      "Engage in conversations about loss: 'Would you like to talk about your wife/husband?'",
+      "Discuss participation in activities: 'Do you enjoy gardening/ reading/ cooking? How often do you get to do these activities?'",
+    ],
   },
   {
     id: 2,
@@ -32,6 +38,12 @@ export const personaData = [
       "Patience, clarity in communication, reassurance, and gentle reminders.",
     image: nurulImage,
     language: ["English", "Malay"],
+    checkList: [
+      "Ask about their general well-being: 'How are you feeling today?'",
+      "Check for memory and cognitive function: 'Do you remember what you did yesterday?'",
+      "Engage in stimulating discussions: 'What shows have you watched recently? Do you have a favorite drama?'",
+      "Provide reassurance: 'It's okay to forget things sometimes. I'm here to help you.'"
+    ],
   },
   {
     id: 3,
@@ -48,6 +60,12 @@ export const personaData = [
       "Maintaining dignity, adapting communication to respect pride, facilitating independence.",
     image: arjunImage,
     language: ["English", "Tamil"],
+    checkList: [
+      "Ask about their general well-being: 'How are you feeling today?'",
+      "Discuss physical limitations and ways to cope: 'Are there any activities you find challenging? How can we make them easier for you?'",
+      "Engage in culturally meaningful conversations: 'What cultural traditions are important to you?'",
+      "Offer emotional support: 'You are doing great, and it's okay to ask for help when you need it.'"
+    ],
   },
   {
     id: 4,
@@ -62,6 +80,12 @@ export const personaData = [
       "Cultural sensitivity, active listening, offering emotional support.",
     image: liImage,
     language: ["Hokkien", "Mandarin", "Teochew", "Cantonese"],
+    checkList: [
+      "Ask about their general well-being: 'How are you feeling today?'",
+      "Ask about social interactions: 'Have you talked to your friends or family recently?'",
+      "Engage in culturally meaningful conversations: 'What cultural traditions are important to you?'",
+      "Explore cultural connections: 'Do you miss any aspects of your cultural community? How can we help you stay connected?'"
+    ],
   },
   {
     id: 5,
@@ -75,5 +99,11 @@ export const personaData = [
       "Providing informational support, encouraging self-care, empathy in health discussions.",
     image: ahmedImage,
     language: ["English", "Malay", "Singlish"],
+    checkList: [
+      "Ask about their general well-being: 'How are you feeling today?'",
+      "Discuss dietary restrictions: 'How are you managing with your new dietary restrictions?'",
+      "Offer informational support: 'Would you like some tips or recipes that fit your dietary needs?'",
+      "Offer emotional support: 'You are doing great, and it's okay to ask for help when you need it.'"
+    ],
   },
 ];
