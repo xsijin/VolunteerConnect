@@ -90,7 +90,7 @@ export const SigninModal = ({ opened, setUser, close }) => {
         <Box mt="md">
           <TextInput
             label="Email"
-            placeholder="user@chopeseats.com"
+            placeholder="volunteer@connect.com"
             required
             withAsterisk
             onChange={(e) => setEmail(e.target.value)}
