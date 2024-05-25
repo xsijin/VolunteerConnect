@@ -17,6 +17,7 @@ export const personaData = [
     trainingFocus:
       "Empathy, conversation about loss, engaging in intellectually stimulating discussions.",
     image: chanImage,
+    language: ["english", "mandarin"],
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ export const personaData = [
     trainingFocus:
       "Patience, clarity in communication, reassurance, and gentle reminders.",
     image: nurulImage,
+    language: ["english", "malay"],
   },
   {
     id: 3,
@@ -45,6 +47,7 @@ export const personaData = [
     trainingFocus:
       "Maintaining dignity, adapting communication to respect pride, facilitating independence.",
     image: arjunImage,
+    language: ["english", "tamil"],
   },
   {
     id: 4,
@@ -58,6 +61,7 @@ export const personaData = [
     trainingFocus:
       "Cultural sensitivity, active listening, offering emotional support.",
     image: liImage,
+    language: ["hokkien", "mandarin", "teochew", "cantonese"],
   },
   {
     id: 5,
@@ -70,5 +74,6 @@ export const personaData = [
     trainingFocus:
       "Providing informational support, encouraging self-care, empathy in health discussions.",
     image: ahmedImage,
+    language: ["english", "malay", "singlish"],
   },
 ];
