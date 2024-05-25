@@ -1,0 +1,57 @@
+.header {
+  padding: 10px;
+}
+
+.ul {
+  padding: 0;
+  li {
+    list-style: none;
+    position: relative;
+    counter-increment: custom-counter;
+    padding-left: 45px;
+    font-weight: bold;
+    color: gray;
+
+    a {
+      text-decoration: none;
+      color: gray;
+    }
+
+    &::before {
+      content: counter(custom-counter) "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid;
+      border-color: gray;
+      border-radius: 50%;
+      background-color: white;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.active {
+      color: black;
+
+      a {
+        color: black;
+      }
+
+      &::before {
+        border-color: black;
+      }
+    }
+  }
+
+  .span {
+    height: 2px;
+    width: 25px;
+    background-color: black;
+  }
+}
