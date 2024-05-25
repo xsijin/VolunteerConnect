@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import mv from "@/assets/mv.png";
 import buttonstyles from "@/components/Parts/Button/Button.module.scss";
 import styles from "@/components/Profile/Profile.module.scss";
+import { useHover } from "@mantine/hooks";
 
 function Profile() {
   // const [data, setData] = useState(null);
@@ -13,6 +14,7 @@ function Profile() {
   // const [scoreId, setScoreId] = useState(null);
   // const { user } = useOutletContext();
   const navigate = useNavigate();
+  const { hovered, ref } = useHover();
 
   // useEffect(() => {
   //   if (!user) {
@@ -61,20 +63,55 @@ function Profile() {
   // }, []);
 
   const elements = [
-    { id: 1, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
-    { id: 2, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
-    { id: 3, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
-    { id: 4, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
-    { id: 5, date: "25/05/2024", score1: 5, score2: 6, score3: 7, score4: 8 },
+    {
+      id: 1,
+      date: "25/05/2024",
+      score1: 5,
+      score2: 6,
+      score3: 7,
+      score4: 8,
+      score5: 5,
+    },
+    {
+      id: 2,
+      date: "25/05/2024",
+      score1: 5,
+      score2: 6,
+      score3: 7,
+      score4: 8,
+      score5: 5,
+    },
+    {
+      id: 3,
+      date: "25/05/2024",
+      score1: 5,
+      score2: 6,
+      score3: 7,
+      score4: 8,
+      score5: 5,
+    },
+    {
+      id: 4,
+      date: "25/05/2024",
+      score1: 5,
+      score2: 6,
+      score3: 7,
+      score4: 8,
+      score5: 5,
+    },
   ];
 
   const rows = elements.map((element) => (
-    <Table.Tr onClick={() => navigate("/")} key={element.id}>
+    <Table.Tr
+      onClick={() => navigate(`/performance/${element.id}`)}
+      key={element.id}
+    >
       <Table.Td>{element.date}</Table.Td>
       <Table.Td>{element.score1}</Table.Td>
       <Table.Td>{element.score2}</Table.Td>
       <Table.Td>{element.score3}</Table.Td>
       <Table.Td>{element.score4}</Table.Td>
+      <Table.Td>{element.score5}</Table.Td>
     </Table.Tr>
   ));
 
@@ -113,17 +150,20 @@ function Profile() {
         </Box>
         <Box mt="xl" w="100%">
           <Title order={1}>HISTORY</Title>
-          <Table mt="xl" highlightOnHover={true}>
+          <Table mt="xl" verticalSpacing="lg">
             <Table.Thead>
               <Table.Tr>
-                <Table.Th>Date taken</Table.Th>
+                <Table.Th>Date</Table.Th>
                 <Table.Th>Communication</Table.Th>
                 <Table.Th>Creativity</Table.Th>
                 <Table.Th>Empathy</Table.Th>
+                <Table.Th>Active Listening</Table.Th>
                 <Table.Th>Problem Solving</Table.Th>
               </Table.Tr>
             </Table.Thead>
-            <Table.Tbody>{rows}</Table.Tbody>
+            <Table.Tbody ref={ref} style={hovered ? { cursor: "pointer" } : {}}>
+              {rows}
+            </Table.Tbody>
           </Table>
         </Box>
 
