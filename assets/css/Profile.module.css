@@ -1,0 +1,8 @@
+.badge {
+  position: relative;
+}
+.badge .icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=Profile.module.css.map */
