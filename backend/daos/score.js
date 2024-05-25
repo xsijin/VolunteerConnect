@@ -32,6 +32,10 @@ const scoreSchema = new Schema(
       type: Number,
       required: true,
     },
+    debrief: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

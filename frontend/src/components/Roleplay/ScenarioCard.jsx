@@ -1,11 +1,13 @@
 import { Box, Flex, Image, Text, Title, Accordion, List } from "@mantine/core";
+/* eslint-disable react/prop-types */
 import styles from "@/components/Roleplay/ScenarioCard.module.scss";
 
-// eslint-disable-next-line react/prop-types
 export const ScenarioCard = ({ persona }) => {
+
   // eslint-disable-next-line react/prop-types
   const { name, age, image, background, personality, issues, trainingFocus, language, checkList } =
     persona;
+
   return (
     <Flex
       w="40%"
