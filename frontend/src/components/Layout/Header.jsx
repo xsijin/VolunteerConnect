@@ -84,9 +84,13 @@ export const Header = ({ user, setUser }) => {
       path: "/scenarios",
       title: "CHOOSE SCENARIOS",
     },
+    // {
+    //   path: "/roleplay/1",
+    //   title: "ROLEPLAY",
+    // },
     {
-      path: "/roleplay/1",
-      title: "ROLEPLAY",
+      path: "/survey",
+      title: "GENERATING RESULTS",
     },
     {
       path: "/performance",
