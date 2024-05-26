@@ -7,6 +7,7 @@ var cors = require("cors");
 var indexRouter = require("./routes/index");
 var userRouter = require("./routes/user");
 var scoreRouter = require("./routes/score");
+var surveyRouter = require("./routes/surveyQns");
 var app = express();
 var securityMiddleware = require("./middlewares/security");
 require("./config/backend");
@@ -24,7 +25,7 @@ app.use(securityMiddleware.checkJWT);
 app.use("/", indexRouter);
 app.use("/user", userRouter);
 app.use("/score", scoreRouter);
-
+app.use("/survey", surveyRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res) {

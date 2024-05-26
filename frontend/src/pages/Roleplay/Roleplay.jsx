@@ -75,7 +75,8 @@ export const Roleplay = () => {
 
     const data = await res.json();
     localStorage.setItem("score", data._id);
-    navigate(`/performance/${data._id}`);
+    // navigate(`/performance/${data._id}`);
+    navigate("/survey");
   };
 
   return (
