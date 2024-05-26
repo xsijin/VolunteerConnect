@@ -1,11 +1,11 @@
-const daoScore = require("../daos/surveyQns");
+const daoSurvey = require("../daos/surveyQns");
 
 module.exports = {
   createSurvey,
 };
 
 async function createSurvey(body) {
-  const data = await daoScore.create(body);
-  console.log(data);
+  const data = await daoSurvey.create(body);
+  console.log("model data: ", data);
   return data;
 }

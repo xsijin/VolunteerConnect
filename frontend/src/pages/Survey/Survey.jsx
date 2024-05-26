@@ -15,7 +15,7 @@ import {
 import { useForm } from "@mantine/form";
 
 import mv from "@/assets/mv.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "@/components/Parts/Button/Button.module.scss";
 
 const Survey = () => {
@@ -26,9 +26,37 @@ const Survey = () => {
     },
   });
 
+  const navigate = useNavigate();
+
   //What are the most common situations or interactions you face during your volunteer work, and can you provide specific examples?
 
   //Have you had to engage in difficult conversations with those you are helping, other volunteers, or staff? Can you describe one such instance and how you navigated it?
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = form.getValues();
+    console.log("form data: ", formData);
+
+    try {
+      // const response = await fetch(process.VITE_API_BASEURL, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     // "Authorization": `Bearer ${token}` // Include the JWT token in the request
+      //   },
+      //   body: JSON.stringify(formData),
+      // });
+      // console.log("Survey created successfully:", response.data);
+      // Optionally reset the form or show a success message
+      // setTitle("");
+      // setDescription("");
+      // setQuestions([{ questionText: "" }]);
+      const score = localStorage.getItem("score");
+      navigate(`/performance/${score}`);
+    } catch (error) {
+      console.error("Error creating survey:", error);
+    }
+  };
 
   return (
     <Flex
@@ -61,7 +89,8 @@ const Survey = () => {
 
         <Space h={20} />
 
-        <form onSubmit={form.onSubmit((values) => console.log(values))}>
+        {/* <form onSubmit={form.onSubmit((values) => console.log(values))}> */}
+        <form>
           <Textarea
             label="What are the most common situations or interactions you encounter during your volunteer work? Can you provide specific examples?"
             placeholder="Describe your experience"
@@ -80,7 +109,8 @@ const Survey = () => {
           <Box ta={"center"} mt="xl">
             <Button
               component={Link}
-              to="/scenarios"
+              // to="/scenarios"
+              onClick={handleSubmit}
               className={styles.button}
               size="lg"
             >

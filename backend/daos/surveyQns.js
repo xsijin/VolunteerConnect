@@ -3,11 +3,6 @@ const Schema = mongoose.Schema;
 
 const surveyQnsSchema = new Schema(
   {
-    user: {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-      required: false,
-    },
     questionOne: {
       type: String,
       required: true,
