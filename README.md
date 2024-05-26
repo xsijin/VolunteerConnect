@@ -6,7 +6,7 @@ Our project is dedicated to enhancing essential skills used during volunteer ser
 
 ### Key Features
 
-- **Interactive Roleplay Scenarios**: Volunteers engage with realistic personas to practice empathy and communication skills.
+- **Interactive Roleplay Scenarios**: Volunteers engage with realistic personas to practice empathy and communication skills, while keeping in mind the language proficiency of the personas.
 - **Engagement Prompts**: Each scenario includes engagement prompts to guide volunteers in their interactions.
 - **Profile Cards**: Detailed profiles for each persona provide background, personality traits, issues, and training focuses.
 - **Results**: A results and debrief providing performance insights and feedback from the roleplay session. Users can also share their results with others.
@@ -21,7 +21,7 @@ Our project is dedicated to enhancing essential skills used during volunteer ser
 
 <img src="https://i.imgur.com/EoDTkMD.png">
 
-**Roleplay & Engagement Prompts**
+**Roleplay & Engagement Prompts (conversation in Mandarin)**
 
 <img src="https://i.imgur.com/eYEYbTR.png">
 <img src="https://i.imgur.com/3B57OjH.png">
