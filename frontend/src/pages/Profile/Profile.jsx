@@ -66,7 +66,7 @@ function Profile() {
 
   const elements = [
     {
-      id: 1,
+      id: "6651de69d74249005171ee99",
       date: "25/05/2024",
       score1: 5,
       score2: 6,
@@ -75,7 +75,7 @@ function Profile() {
       score5: 5,
     },
     {
-      id: 2,
+      id: "6651de69d74249005171ee99",
       date: "25/05/2024",
       score1: 5,
       score2: 6,
@@ -93,7 +93,7 @@ function Profile() {
       score5: 5,
     },
     {
-      id: 4,
+      id: "6651de69d74249005171ee99",
       date: "25/05/2024",
       score1: 5,
       score2: 6,
