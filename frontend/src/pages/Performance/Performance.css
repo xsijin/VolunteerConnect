@@ -1,0 +1,37 @@
+.chartContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 12px;
+  // background-color: white;
+  // border: 1px solid black;
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.chartTitle {
+  margin: 30px 40px;
+}
+
+hr.solid {
+  border-top: 0.1px solid #bbb;
+  margin: 30px 50px;
+}
+
+.chartContainer .summary {
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chartContainer .summary div {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.recharts-polar-grid {
+  stroke: black;
+}
