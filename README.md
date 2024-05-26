@@ -13,37 +13,22 @@ Our project is dedicated to enhancing essential skills used during volunteer ser
 
 ## Screenshots
 
-**Homepage (if not logged in)**
+**Homepage**
 
-<img src="/src/assets/images/homepage.png">
+<img src="https://i.imgur.com/sGy3AQG.png">
 
-**Homepage/Dashboard (if logged in)**
+**Scenario Selection**
 
-<img src="/src/assets/images/dashboard.png">
+<img src="https://i.imgur.com/EoDTkMD.png">
 
-**Board Assistant - Moosage Count Feature**
+**Roleplay & Engagement Prompts**
 
-<img src="/src/assets/images/count.png">
+<img src="https://i.imgur.com/eYEYbTR.png">
+<img src="https://i.imgur.com/3B57OjH.png">
 
-**Board Assistant - Delete Feature**
+**Results & Performance**
 
-<img src="/src/assets/images/boardassist.png">
-
-**Board Assistant - Copy Board Public URL Feature**
-
-<img src="/src/assets/images/copy.png">
-
-**Inline Editing of Boards**
-
-<img src="/src/assets/images/editboard.png">
-
-**Inline Editing of Moosages**
-
-<img src="/src/assets/images/editmoosage.png">
-
-**Error Page**
-
-<img src="/src/assets/images/errorpage.png">
+<img src="https://i.imgur.com/O7o7jX7.png">
 
 ## Technologies Used
 
@@ -61,7 +46,7 @@ Web link: https://volunteer2024.onrender.com/
 2. Engage with the elderly as you would in a conversation, trying your best to address their concerns.
 3. Use the feedback received to improve your communication and support skills.
 
-Planning:
+Team Planning Resources:
 
 - [Trello Board](https://trello.com/b/BwURx6DS/hacksingapore2024)
 - [Figma Wireframe](https://www.figma.com/design/Hieytz57rddWCiOOydTNPZ/Hacksingapore?node-id=66-21&t=r5HxiZg9TsAEM1U6-0)
