@@ -104,14 +104,14 @@ export const ShareScore = ({ score }) => {
 
   return (
     <>
-      <Box mt="xl" w={"100%"}>
+      <Box w={"100%"} style={{ marginTop: "100px" }}>
         <Box>
-          <Text fw={"bold"} mt="lg" fz={"xl"} ta={"center"}>
+          <Title ta={"center"}>
             SHARE YOUR SCORE<br></br>
-          </Text>
-          <Text ta={"center"}>
+          </Title>
+          <Text ta={"center"} mt="md">
             Let someone else glimpse into your volunteer socre by sharing your
-            profile link.
+            profile link!
           </Text>
           <Input
             size="lg"
