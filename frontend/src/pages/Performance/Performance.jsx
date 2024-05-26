@@ -2,9 +2,9 @@ import { RadarChart } from "@mantine/charts";
 import "./Performance.css";
 import { useLocation, useOutletContext } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Flex } from "@mantine/core";
-
+import { Box, Flex, Image, Text, Title } from "@mantine/core";
 import { ShareScore } from "../../components/Performance/ShareScore";
+import trophy from "@/assets/trophy.png";
 
 function Performance() {
   const location = useLocation();
@@ -24,7 +24,7 @@ function Performance() {
       console.log("response: ", json);
       setData([
         {
-          skill: "Communication Skill",
+          skill: "Communication",
           points: json.communication,
         },
         {
@@ -40,7 +40,7 @@ function Performance() {
           points: json.activelistening,
         },
         {
-          skill: "Problem-Solving Skill",
+          skill: "Problem Solving",
           points: json.problemsolving,
         },
       ]);
@@ -64,29 +64,69 @@ function Performance() {
           align={"start"}
           direction={"column"}
         >
-          <div className="chartContainer">
-            <p className="chartTitle">Performance Chart</p>
-            <hr class="solid" />
+          {/* Chart */}
+          <Box
+          // className="chartContainer"
+          >
+            {/* Performance */}
+            <Box mb="xl" ta={"center"} mx="auto">
+              <Title ta={"center"}>PEFORMANCE</Title>
+              <Box m="auto" w="150px">
+                <Image src={trophy} />
+              </Box>
+              <Box
+                bg={"white"}
+                p={"xl"}
+                style={{
+                  borderRadius: "14px",
+                  width: "600px",
+                  margin: "auto",
+                }}
+                mt="lg"
+              >
+                <RadarChart
+                  h={300}
+                  data={data}
+                  dataKey="skill"
+                  // withPolarGrid
+                  // withPolarAngleAxis
+                  // withPolarRadiusAxis
+                  series={[{ name: "points", color: "blue.4", opacity: 0.2 }]}
+                />
+              </Box>
 
-            <RadarChart
-              h={300}
-              data={data}
-              dataKey="skill"
-              // withPolarGrid
-              // withPolarAngleAxis
-              // withPolarRadiusAxis
-              series={[{ name: "points", color: "blue.4", opacity: 0.2 }]}
-            />
-            <hr class="solid" />
-            {data.map((x, idx) => (
-              <p key={idx}>{`${x.skill}: ${x.points}`}</p>
-            ))}
-            <hr class="solid" />
-            <div className="summary">
-              <div>Summary Feedback</div>
-              <div>{debrief}</div>
-            </div>
-          </div>
+              <Box
+                mx="auto"
+                mt="xl"
+                ta="left"
+                fz={"xl"}
+                style={{ width: "200px" }}
+              >
+                {data.map((x, idx) => (
+                  <Text fw={"bold"} key={idx} fz={"lg"}>
+                    {`${x.skill}: ${x.points}`} / 10
+                  </Text>
+                ))}
+              </Box>
+            </Box>
+
+            {/* Summary */}
+            <Box style={{ marginTop: "100px" }}>
+              <Title ta={"center"}>SUMMARY FEEDBACK</Title>
+              <Box
+                bg={"white"}
+                mt="lg"
+                p={"xl"}
+                style={{
+                  borderRadius: "14px",
+                }}
+              >
+                <Text ta={"left"} fz={"xl"}>
+                  {debrief}
+                </Text>
+              </Box>
+            </Box>
+          </Box>
 
           {(localStorageScoreId == pathId || user) && (
             <ShareScore score={pathId} />
