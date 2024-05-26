@@ -44,7 +44,7 @@ const Survey = () => {
         <Title
           order={1}
           style={{
-            fontSize: "70px",
+            fontSize: "50px",
           }}
         >
           GENERATING RESULTS
@@ -53,23 +53,26 @@ const Survey = () => {
         <Space h={20} />
 
         <Text fz="xl" fs={"italic"}>
-          Please wait while we calculate results, meanwhile please share with us
-          on the following questions pertaining to your volunteer experience.
+          Thank you for your patience while we calculate your results. In the
+          meantime, we’d love to hear about your volunteering experiences. Your
+          feedback helps us improve our platform and better support volunteers
+          like you.
         </Text>
 
         <Space h={20} />
 
         <form onSubmit={form.onSubmit((values) => console.log(values))}>
           <Textarea
-            label="What are the most common situations or interactions you face during your volunteer work, and can you provide specific examples?"
-            placeholder="Describe your volunteer experience"
+            label="What are the most common situations or interactions you encounter during your volunteer work? Can you provide specific examples?"
+            placeholder="Describe your experience"
             minRows={4}
             {...form.getInputProps("questionOne")}
           />
+          <br />
 
           <Textarea
-            label="What are the most common situations or interactions you face during your volunteer work, and can you provide specific examples?"
-            placeholder="Describe your volunteer experience"
+            label="Have you had to engage in difficult conversations with those you are helping, other volunteers, or staff? Can you describe one such instance and how you navigated it?"
+            placeholder="Describe your experience"
             minRows={4}
             {...form.getInputProps("questionTwo")}
           />
