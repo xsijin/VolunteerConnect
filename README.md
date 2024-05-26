@@ -2,22 +2,14 @@
 
 Empowering Volunteers Through Virtual Roleplay Experiences
 
-Welcome to our project dedicated to enhancing the skills of volunteers who work with the elderly. Our roleplay experience offers a unique, interactive learning platform designed to simulate real-life scenarios, helping volunteers gain the empathy, patience, and communication skills necessary to effectively engage and support the elderly in their care. Through immersive roleplay, volunteers can practice and refine their approach, ensuring they are well-prepared to meet the unique challenges faced by the elderly community.
-
-This project is a digital tool designed to aid volunteer training through realistic roleplay scenarios. Volunteers interact with virtual elderly personas, each with their own background, personality, issues, and training focus. By engaging with these personas, volunteers can learn and practice the best ways to support and communicate with the elderly.
+Our project is dedicated to enhancing essential skills used during volunteer services, such as empathy, patience, and communication skills. Through our roleplay experience on an interactive platform, we simulate conversations with virtual elderly personas, each with their own background, personality, and pressing issues. By engaging with these personas, volunteers can practice and refine their approach to better support and communicate with the elderly community effectively.
 
 ### Key Features
 
 - **Interactive Roleplay Scenarios**: Volunteers engage with realistic personas to practice empathy and communication skills.
-- **Customizable Checklists**: Each scenario includes a checklist of topics and questions to guide volunteers in their interactions.
+- **Engagement Prompts**: Each scenario includes engagement prompts to guide volunteers in their interactions.
 - **Profile Cards**: Detailed profiles for each persona provide background, personality traits, issues, and training focuses.
-- **Responsive Design**: The platform is designed to be accessible on various devices, ensuring flexibility for volunteers.
-
-### Usage
-
-1. Browse the different elderly personas.
-2. Engage with the roleplay scenarios by following the provided checklists.
-3. Use the feedback received to improve your communication and support skills.
+- **Results**: A results and debrief providing performance insights and feedback from the roleplay session. Users can also share their results with others.
 
 ## Screenshots
 
@@ -62,6 +54,12 @@ This project is a digital tool designed to aid volunteer training through realis
 ## Getting Started
 
 Web link: https://volunteer2024.onrender.com/
+
+### Instructions
+
+1. Choose an elderly persona you'd like to start your roleplay with.
+2. Engage with the elderly as you would in a conversation, trying your best to address their concerns.
+3. Use the feedback received to improve your communication and support skills.
 
 Planning:
 
