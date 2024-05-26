@@ -26,9 +26,14 @@ Our project is dedicated to enhancing essential skills used during volunteer ser
 <img src="https://i.imgur.com/eYEYbTR.png">
 <img src="https://i.imgur.com/3B57OjH.png">
 
+**Survey**
+<img width="1337" alt="Screenshot 2024-05-26 at 11 26 13 AM" src="https://github.com/xsijin/VolunteerConnect/assets/88537845/35ceb868-00b7-4f7c-b80c-78fcb38e53c3">
+
 **Results & Performance**
 
 <img src="https://i.imgur.com/O7o7jX7.png">
+<img width="1189" alt="Screenshot 2024-05-26 at 11 24 51 AM" src="https://github.com/xsijin/VolunteerConnect/assets/88537845/474316cd-3a36-451b-a6a6-bb7a17855df5">
+
 
 ## Technologies Used
 
